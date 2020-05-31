@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /*-----
@@ -10,8 +11,17 @@ import org.springframework.stereotype.Component;
  * */
 @Component
 public class Coder {
+	
+	/*
+	 *  insted of we creating object manualy autowired is used 
+	 *  */
+	@Autowired
+	Laptop hp;
+	
 	void code()
 	{
+		
 		System.out.println("coding ..........");
+		hp.complie();
 	}
 }
